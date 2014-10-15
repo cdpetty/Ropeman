@@ -1,0 +1,20 @@
+Ropeman
+  Word
+    Vector<char> word_full
+    Vector<char> display
+    bool guess(char g)
+  
+  Dictionary
+    Some form of dictionary
+    void get_word(int difficulty)
+
+  Man
+    void draw()
+    void wrong()
+
+  Game 
+    Vector<char> guesses
+    Word word
+    Man man
+    Dictionary dict
+
