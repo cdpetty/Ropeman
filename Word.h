@@ -1,6 +1,9 @@
 //Word.h
 #include <string>
 #include <vector>
+#include <iostream>
+
+using namespace std;
 
 class Word{
   public:
@@ -10,9 +13,9 @@ class Word{
 
   private:
     string word; 
-    Vector<char> display;
+    vector<char> display;
 
-}
+};
 
 ostream& operator<<(ostream& os, const Word& w);
 //istream& operator>>(istream& is, Word& w);

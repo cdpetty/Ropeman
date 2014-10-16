@@ -1,8 +1,19 @@
-    string state_0 = "______\n|    |\n|\n|\n|\n|\n--^-^-^-^-";
-    string state_1 = "______\n|    |\n|    O\n|\n|\n|\n--^-^-^-^-";
-    string state_2 = "______\n|    |\n|    O\n|    |\n|\n|\n--^-^-^-^-";
-    string state_3 = "______\n|    |\n|    O\n|   -|\n|\n|\n--^-^-^-^-";
-    string state_4 = "______\n|    |\n|    O\n|   -|-\n|\n|\n--^-^-^-^-";
-    string state_5 = "______\n|    |\n|    O\n|   -|-\n|   /\n|\n--^-^-^-^-";
-    string state_6 = "______\n|    |\n|    O\n|   -|-\n|   / \\\n|\n--^-^-^-^-";
- 
+#include "Man.h"
+
+Man::Man(int s):stage(s) {
+  if (s>max_num_stages) cerr << "ERROR";
+}
+
+void Man::increment_stage(){
+  if (++stage > max_num_stages) cerr << "ERROR";
+}
+
+int Man::get_stage(){
+  return stage;
+}
+
+int Man::get_picture(){ return drawings[stage];}
+
+ostream& operator<<(ostream& os, const Man& m){
+  return os << m.get_picture() << '\n';
+}
