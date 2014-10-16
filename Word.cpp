@@ -45,6 +45,14 @@ ostream& operator<<(ostream& os, const Word& w){
   return os << w.get_display();
 }
 
+istream& operator>>(istream& is, Word& w){
+  string chosen_word;
+  is >> chosen_word;
+  if (!is) return is; //What does this line do?
+  w = Word(chosen_word) 
+  return is;
+}
+
 void sanitize_string(string& s){
   int counter = 0;
   for(char x : s){

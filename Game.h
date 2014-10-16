@@ -9,11 +9,14 @@ class Game{
   public:
     Game();
     void play(); 
-    void terminate();
-    void init();
+    void initialize_word();
+    void initialize_man();
+    void guessing_game();
+    class Err { };
   
   private:
     vector<char> guesses;
+    bool game_over;
     Word w;
     Man m;
     //Dictionary dict;

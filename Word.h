@@ -22,6 +22,6 @@ class Word{
 };
 
 ostream& operator<<(ostream& os, const Word& w);
-//istream& operator>>(istream& is, Word& w);
+istream& operator>>(istream& is, Word& w);
 
 
