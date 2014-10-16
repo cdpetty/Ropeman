@@ -39,18 +39,28 @@ void Game::initialize_man(){
   m = Man()  
 }
 
-void guessing_game(){
+void Game::guessing_game(){
   while (!game_over){
     string guess;
-    cout << m;
-    cout << w;
-    cout << "\n Input Guess: ";
+    cout << m  << w << "\n Input Guess: ";
     cin >> guess;
-    w.guess(guess);  //Always calls string guess function
+    int num_occur = w.guess(guess);  //Always calls string guess function
+    if (num_occur == 0){
+      cout << "The letter '" << guess << "' is not in the word." << endl;
+      m.increment_stage();
+    }
+    else{
+      cout << "The letter '" << guess << "' occured " << num_occor << " time." << endl; 
+    }
+    update_game_state();
   }
+  cout << "Good Game! Play again?"
 }
 
-
+void Game::update_game_state(){
+  if (m.is_over())
+    game_over = true;
+}
 //Non-class functions
 void welcome(){
   cout << "Welcome to ropeman!" << endl;

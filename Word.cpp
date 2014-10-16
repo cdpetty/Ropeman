@@ -30,12 +30,12 @@ int Word::guess(char& g){
   return num_occurences; 
 }
 
-bool Word::guess(string& s){
+/*bool Word::guess(string& s){
   sanitize_string(s);
   if (s==word)
     return true;
   return false;
-}
+}*/
 
 string Word::get_display(){
   return str(display.begin(), display.end());

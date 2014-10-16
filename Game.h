@@ -12,6 +12,7 @@ class Game{
     void initialize_word();
     void initialize_man();
     void guessing_game();
+    void update_game_state();
     class Err { };
   
   private:

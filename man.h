@@ -10,6 +10,7 @@ class Man{
     void increment_stage();  
     int get_stage();
     string get_picture();
+    bool is_over();
     Man():stage(0){}
     Man(int s);
 

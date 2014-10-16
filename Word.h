@@ -7,8 +7,7 @@ using namespace std;
 
 class Word{
   public:
-    int guess(char& g);
-    bool guess(string& s);
+    int guess(string& g);
     string get_word(){return word;}
     string get_display();
     Word();
