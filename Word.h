@@ -7,13 +7,17 @@ using namespace std;
 
 class Word{
   public:
-    bool guess_char(const char& g);
-    bool guess_string(const string& s);
-    string get_word();
+    int guess(char& g);
+    bool guess(string& s);
+    string get_word(){return word;}
+    string get_display();
+    Word();
+    Word(string w);
 
   private:
     string word; 
     vector<char> display;
+    const string default_word = "ropeman";
 
 };
 

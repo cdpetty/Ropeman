@@ -10,6 +10,7 @@ class Game{
     Game();
     void play(); 
     void terminate();
+    void init();
   
   private:
     vector<char> guesses;
